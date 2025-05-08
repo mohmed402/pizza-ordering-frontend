@@ -40,13 +40,14 @@ npm install
 npm start
 ```
 ---
-##📁 Project Structure
+
+## 📁 Project Structure
 
 ```bash
 pizza-frontend/
 ├── components/         # UI Components
 ├── styles/             # CSS Modules
-├── pages/              # Page-level components (e.g., Order.js)
+├── pages/              # Page-level components (Order.js)
 ├── data/               # Constants like steps, image mappings
 ├── services/           # API call logic (modularised)
 
