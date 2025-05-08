@@ -1,0 +1,142 @@
+.toppingsGroup {
+    margin-bottom: 24px;
+  }
+  
+  .toppingsLabel {
+    display: block;
+    margin-bottom: 16px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  
+  .toppingsContainer {
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+  }
+  
+  @media (width <= 991px) {
+    .toppingsContainer {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  .pizzaPreview {
+    flex: 1;
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 1;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-bottom: 24px;
+    transition: transform 0.3s;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04), 0 8px 12px -2px rgba(0, 0, 0, 0.06), 0 4px 6px rgba(0, 0, 0, 0.04);
+  }
+  
+  .pizzaPreview:hover {
+    transform: scale(1.02);
+  }
+  
+  .pizzaGlow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(243, 104, 5, 0.1) 0%, rgba(243, 104, 5, 0.05) 50%, transparent 70%);
+  }
+  
+  .pizzaBaseImage {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    /* padding: 24px; */
+    transition: transform 0.3s;
+    /* overflow: hidden; */
+  }
+  
+  .toppingImage {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    opacity: 0.9;
+    /* padding: 24px; */
+    transition: transform 0.3s;
+    animation: 0.3s ease-in fadeIn;
+    overflow: hidden;
+  }
+  
+  .toppingsGrid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+  }
+  
+  .toppingLabel {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .toppingLabel:hover {
+    background-color: rgba(243, 104, 5, 0.1);
+  }
+  
+  .toppingCheckbox {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 0.9;
+    }
+  }
+
+
+  /* .toppingImage {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+  } */
+  
+  .animateThrow {
+    animation: throwTopping 0.9s ease-out forwards;
+    z-index: 200;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-300px) scale(0.2) rotate(-45deg);
+    }
+    80% {
+      opacity: 1;
+      transform: translateY(10px) scale(1.05) rotate(5deg); /* slight overshoot */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1) rotate(0deg);
+    }
+  }
+  
+  

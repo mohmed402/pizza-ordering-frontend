@@ -1,0 +1,43 @@
+.logo {
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: center;
+    width: 102px;
+    height: 52px;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 28px;
+    border: 1px #000000 solid;
+    border-bottom-width: thick;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+
+  .logo:hover{
+    /* width: 110px; */
+    transform: scale(1.25);
+    padding: 0.5px 2px;
+    /* height: 55px; */
+    transition: 1s;
+  }
+  
+
+  .spinner {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    border: 3px solid #fff;
+    border-top: 3px solid transparent;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    vertical-align: middle;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }

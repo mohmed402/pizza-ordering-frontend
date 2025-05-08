@@ -1,0 +1,129 @@
+.section {
+    background-color: #fff;
+    max-width: 1072px;
+    margin: 0 auto;
+    padding-top: 450px;
+    padding: 64px 32px;
+  }
+  
+  .headerContainer {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .title {
+    color: #f36805;
+    margin-bottom: 16px;
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 56px;
+  }
+  
+  .subtitle {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  
+  .formContainer {
+    background-color: #f5f3f1;
+    border-radius: 12px;
+    padding: 32px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04), 0 8px 12px -2px rgba(0, 0, 0, 0.06);
+  }
+  
+  .orderButton {
+    width: 100%;
+    margin-top: 32px;
+    padding: 16px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    background-color: #f36805;
+    border: none;
+    border-radius: 800px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .orderButton:hover {
+    background-color: #df5e00;
+  }
+
+
+  .formGroup {
+    margin-bottom: 24px;
+  }
+  
+  .formLabel {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  
+  .formSelect {
+    background-color: #fff;
+    border: 1px solid #797876;
+    border-radius: 8px;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+  }
+
+
+
+  .orderSummary {
+    margin-top: 32px;
+    padding: 24px;
+    background-color: #fff;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  }
+  
+  .totalPrice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #f36805;
+  }
+
+  .container {
+    margin-bottom: 24px;
+  }
+  
+  .title {
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  
+  .buttonGroup {
+    display: flex;
+    gap: 16px;
+  }
+  
+  .button {
+    padding: 14px 24px;
+    font-size: 16px;
+    border-radius: 50px;
+    font-weight: 600;
+    border: 2px solid transparent;
+    background-color: #f2d9c1;
+    color: #000000;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    width: 50%;
+  }
+  
+  .button:hover {
+    background-color: #e4e4e438;
+  }
+  
+  .active {
+    background-color: #fa8231;
+    border-color: #fa8231;
+  }
+  

@@ -1,0 +1,29 @@
+.mobileMenuButton {
+    z-index: 200;
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    padding: 8px;
+    display: none;
+    position: fixed;
+    top: 16px;
+    right: 16px;
+  }
+  
+  .menuBar {
+    background-color: #f36805;
+    width: 24px;
+    height: 2px;
+    margin-bottom: 4px;
+    display: block;
+  }
+  
+  .menuBar:last-child {
+    margin-bottom: 0;
+  }
+  
+  @media (max-width: 640px) {
+    .mobileMenuButton {
+      display: block;
+    }
+  }

@@ -1,0 +1,78 @@
+.pizza-builder {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .pizza-builder h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .pizza-builder form > div {
+    margin-bottom: 16px;
+  }
+  
+  .pizza-builder label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #555;
+  }
+  
+  .pizza-builder input[type="text"],
+  .pizza-builder select {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 14px;
+  }
+  
+  .pizza-builder input[type="text"]:focus,
+  .pizza-builder select:focus {
+    border-color: #fa8231;
+    box-shadow: 0 0 0 2px rgba(250, 130, 49, 0.2);
+  }
+  
+  .pizza-builder .toppings-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .pizza-builder .toppings-list label {
+    background: #f1f1f1;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .pizza-builder .toppings-list input {
+    margin-right: 8px;
+  }
+  
+  .pizza-builder button {
+    width: 100%;
+    background-color: #fa8231;
+    color: white;
+    font-weight: bold;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .pizza-builder button:hover {
+    background-color: #d96a20;
+  }
+  
