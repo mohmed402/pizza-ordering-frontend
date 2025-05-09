@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = `${"https://pizza-ordering-system-production.up.railway.app"}/api/orders`;
+const BASE_URL = `${"https://pizza-ordering-system-production.up.railway.app"}api/orders`;
 
 export async function handleOrderSubmit(payload, setOrder, setOrderId, setIsCard, setText, setIsLoading) {
   try {
