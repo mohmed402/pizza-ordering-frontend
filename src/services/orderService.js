@@ -1,6 +1,10 @@
 import axios from "axios";
 
 const BASE_URL = `${"https://pizza-ordering-system-production.up.railway.app/"}api/orders`;
+// const BASE_URL = `${"http://localhost:8080/"}api/orders`;
+
+
+let  userid_temp;
 
 export async function handleOrderSubmit(payload, setOrder, setOrderId, setIsCard, setText, setIsLoading) {
   try {
@@ -10,6 +14,8 @@ export async function handleOrderSubmit(payload, setOrder, setOrderId, setIsCard
 
     setOrder(order);
     setOrderId(order.id);
+    userid_temp = order.id;
+    console.log("userid_temp", userid_temp)
     setText("Adding to Cart");
     setIsCard(true);
     console.log("Order Created:", order);
@@ -32,14 +38,15 @@ export async function handlePayment(orderId, method, setIsCard, setText) {
   }
 }
 
-export async function advanceOrderState(orderId, setCurrentStep, setStep) {
+export async function advanceOrderState(orderId, setCurrentStep, setStep, step) {
   try {
     const response = await axios.post(`${BASE_URL}/${orderId}/next`);
     const updatedOrder = response.data;
 
     const status = updatedOrder.status.toLowerCase();
+    console.log("the crrent status is: ", status)
     setCurrentStep(status);
-    setStep((prev) => prev + 1);
+    setStep(step + 1);
   } catch (error) {
     console.error("Failed to advance order state:", error);
   }

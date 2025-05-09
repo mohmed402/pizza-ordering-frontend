@@ -22,7 +22,7 @@ const PaymentModal = ({ totalPrice, onClose, onPay, nextStage, text }) => {
         setIsLoading(false)
         onClose();
         nextStage();
-      }, "1500");
+      }, 1500);
     }
   };
   

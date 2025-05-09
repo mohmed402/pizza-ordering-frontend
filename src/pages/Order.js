@@ -35,29 +35,32 @@ function Order({setPage}) {
   const [deliveryMethod, setDeliveryMethod] = useState("delivery");
   const [orderId, setOrderId] = useState(null);
   const [showPaymentModal, setShowPaymentModal] = useState(false);
-  const [step, setStep] = useState(1);
+  const [step, setStep] = useState(0);
   const [order, setOrder] = useState([]);
   const [isCard, setIsCard] = useState(false);
   const [text, setText] = useState("Processing...")
 
 
 
-  useEffect(() => {
+ 
 
+  useEffect(() => {
     if (
       currentStep !== "choosing" &&
       currentStep !== "delivered" &&
       orderId !== null
     ) {
       const timer = setTimeout(() => {
-        setStep(step + 1)
-        advanceOrderState(orderId, setCurrentStep, setStep);
+        if (step < steps.length - 1) {
+          setStep(step + 1);
+          advanceOrderState(orderId, setCurrentStep, setStep, step)
 
-      }, 4500); 
+        }
+      }, 4500);
   
-      return () => clearTimeout(timer); 
+      return () => clearTimeout(timer);
     }
-  }, [currentStep, orderId]);
+  }, [currentStep, orderId, step]);
 
 
   function updateCustomerName(value) {
@@ -191,7 +194,7 @@ function Order({setPage}) {
             totalPrice={order.totalCost}
             onClose={() => setShowPaymentModal(false)}
             onPay={(method) => handlePayment(orderId, method, setIsCard, setText)}
-            nextStage={()=>advanceOrderState(orderId, setCurrentStep, setStep)}
+            nextStage={()=>advanceOrderState(orderId, setCurrentStep, setStep, step)}
             text={text}
           />
         )}
