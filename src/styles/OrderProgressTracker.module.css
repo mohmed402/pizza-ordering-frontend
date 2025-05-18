@@ -41,3 +41,26 @@
     height: 2px;
     transition: background-color 0.3s;
   }
+
+
+  @media (max-width: 780px) {
+    .stepContent {
+     min-width: 1rem;
+    }
+  
+    .stepConnector {
+      width: 1rem;
+    }
+
+    .stepLabel {
+      font-size: 0.6rem;
+    }
+  }
+  @media (max-width: 450px) {
+    .progressContainer{
+      gap: 1px;
+    }
+    .stepConnector {
+      gap: 0;
+    }
+  }
